@@ -1,0 +1,15 @@
+.contentPage{
+    h1{
+        font-size: 96px;
+        color: #10E956;
+    }
+    span{
+        font-size: 24px;
+    }
+}
+
+.aligItems{
+    justify-content: center;
+    align-items: center;
+    background-color: #050810;
+}
