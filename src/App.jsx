@@ -1,72 +1,88 @@
 
 import './App.css'
+import {faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Home from './components/Home/Home';
-import Tools from './components/Tools/Tools';
-import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
-import  { useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClose } from '@fortawesome/free-solid-svg-icons'; 
-import ReactFullpage from '@fullpage/react-fullpage';
-
+import { useState } from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { DataProvider } from './/context/dataContext';
+import { useRef } from 'react';
 function App() {
-  const [openMen, setOpenMen] = useState('hidden');
-
-  const openMenu = ()=>{
-    setOpenMen(openMen=== 'hidden' ? 'visible' : 'hidden');
+  const [ openMenu, setOpenMenu] = useState(false);
+  const homeRef = useRef(null)
+  const toogleMenu = ()=> {
+    setOpenMenu(!openMenu);
   }
 
-  const goToSection= (section)=>{
-    window.location.hash= section;
-    openMenu();
+ 
+  const goToSection = ( refPage)=> {
+    if(homeRef.current){
+      switch(refPage){
+        case 1: 
+          homeRef.current.gotToHome();
+          break;
+        case 2: 
+          homeRef.current.gotToTools();
+          break;
+        case 3:
+          homeRef.current.goToProject();
+          break;
+        case 4:
+          homeRef.current.gotToContact();
+          break;
+        default:
+          break;
+      }
+      
+    }
   }
-
 
   return (
-    <>
-      <div className='toolbar'>
-        
-        <div className='logo'>JD</div>
+    <BrowserRouter>
+      <DataProvider>
 
-        <div className='toggle' onClick={openMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className='container'>
+
+          <div className='toolbar'>
+
+            <div className='isDesktop'>
+              <Link className='link' onClick={()=> goToSection(1)}> Home </Link>
+              <Link className='link' onClick={()=> goToSection(2)}> Habilidades</Link>
+              <Link className='link' onClick={()=> goToSection(3)}> Portafolio</Link>
+              <Link className='link' onClick={()=> goToSection(4)}>Contacto</Link>
+
+            </div>
+
+            <div className='section isMobil'>
+              <FontAwesomeIcon icon={faBars} size='2x' className='toogle'  onClick={toogleMenu}/>
+            </div>
+
+          </div>
+
+          <div className='menu' style={{ visibility: openMenu? 'visible' : 'hidden'}}>
+            <div className='close'>
+              <FontAwesomeIcon icon={faXmark} size='2x' className='close' style={{ cursor: 'pointer'}} onClick={toogleMenu}/>
+            </div>
+              
+            <div className='sideContent'>
+              <a >Habilidades</a>
+              <a >Experiencia</a>
+              <a >Portafolio</a>
+              <a >Contacto</a>
+            </div>
+              
+          </div>
+
+          <div className='content'>
+            <Home ref={homeRef}/>
+          </div>
+
+          <Footer  gotoHome={()=> goToSection(1)} gotoTool={()=> goToSection(2)} gotoProject={()=> goToSection(3)} gotoContact={()=> goToSection(4)}/>
         </div>
-        
-      </div>
-
-      <div className='menu' style={{ visibility: openMen}}>
-        <div className='tabClose'>
-          <FontAwesomeIcon icon={faClose} onClick={openMenu} size="3x" style={{ color: 'black', cursor: 'pointer' }}/>
-        </div>
-
-        <div className='contentMenu'>
-          <p onClick={()=> goToSection('section1')}>Home</p>
-          <p onClick={()=> goToSection('section2')}>Tecnologias</p>
-          <p onClick={()=> goToSection('section3')}>Proyectos</p>
-          <p onClick={()=> goToSection('section4')}>Contacto</p>
-        </div>
-      </div>
-
-      <ReactFullpage
-        licenseKey = {"OPEN-SOURCE-GPL"}
-        scrollingSpeed = {1000}
-        render={() => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className='content'>
-                <div className="section"> <Home/></div>
-                <div className="section"> <Tools /></div>
-                <div className="section"> <Projects /></div>
-                <div className="section"> <Footer /></div>
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+      </DataProvider>
       
-    </>
+    </BrowserRouter>
   )
 }
 

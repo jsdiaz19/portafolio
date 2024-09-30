@@ -1,0 +1,36 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+.brand{
+    font-family: 'Bestermind', sans-serif;
+    font-size: 3vw;
+}
+
+.socialNetwork{
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    
+}
+
+.infoDiv, .contactDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+}
+
+.contactDiv{
+    gap: 20px;
+    .lineContat{
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+}

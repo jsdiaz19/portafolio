@@ -1,0 +1,134 @@
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.contentProject{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2%;
+    width: 100%;
+    gap: 3%;
+    overflow:hidden;
+    scroll-behavior: smooth;
+}
+
+.cardProject{
+    background-color: #2d343f;
+    border-radius: 20px;
+    padding: 3%;
+    gap: 3%;
+    flex: 0 0 22vw;
+    max-width: 22vw;
+    position: relative;
+    transition: transform 0.3s ease;
+    
+    #cardContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+        word-break: break-all;
+    }
+    
+    img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.header{ text-align: center;}
+
+.cardProject:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    #cardContent{
+        opacity: 0.5;
+    }
+    .infoHover{
+        opacity: 1;
+    }
+}
+
+
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2%;
+    .btnVNav{
+        padding: 2%;
+        background-color: #2d343f;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .active{
+        background-color: #075fe4;
+    }
+}
+
+.barAction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .btnAct{
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+ 
+    }
+}
+
+.infoHover{
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .sectionHover{
+        background-color: rgb(33, 33, 33);
+        color: white;
+        padding: 2%;
+        width: 90%;
+        
+    }
+
+    .izq {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .der {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .cardProject img{
+        width: 100%;
+        max-width: 80vw;
+    }
+
+    .cardProject{
+        flex: 0 0 35vw;
+        max-width: 35vw;
+    }
+
+    #cardContent{
+        font-size:smaller;
+    }
+
+}

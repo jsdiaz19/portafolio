@@ -1,109 +1,100 @@
+.container{
+  background-color: #1B1F24;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .toolbar{
-  position: fixed;
-  width: 100%;
-  height: 8vh;
-  background-color: #10E956;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
-  div{
-    margin: 0 15px;
-    cursor: pointer;
+  height: 4em;
+  max-width: 100%;
+  padding: 2% 5%;
+
+
+  a{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
   }
-}
 
-.logo{
-  height: 5vh;
-  width: 3vw;
-  background-color: #000000;
-  border-radius: 10px;
-  color: #10E956;
-  font-weight: bolder;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 24px;
-  
-}
-
-.toggle{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 5vh;
-  gap: 14%;
-  div{
-    border: 3px solid  #070000;
-    border-radius: 10px;
-  }
-}
-
-.toggle div:nth-child(1) {
-  width: 2vw;
-}
-
-.toggle div:nth-child(2) {
-  width: 1.5vw;
-}
-
-.toggle div:nth-child(3) {
-  width: 1vw;
-}
-
-.circle{
-  clip-path: ellipse(100% 10% at 50% 100%);
-  background-color: white;
-  position: absolute;
-  bottom: 0px;
-  width: 100vw;
-  height: 90%;
 }
 
 .content{
-  flex: 1;
-}
-
-.contentPage{
-  height: 92vh;
   display: flex;
   flex-direction: column;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  padding: 2% 5%;
+  margin-bottom: 20px;
+}
+
+.isDesktop{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15%;
+  align-items: center;
+  .link:hover{
+    color: gray;
+  }
+}
+
+.isMobil{
+  display: none;
+  .toogle{
+    cursor: pointer;
+  }
 }
 
 .menu{
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
-  background-color: #10E956;
   position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  background-color: #2d343f;
+  padding: 8%;
+  box-sizing: border-box;
+  width:100%;
   display: flex;
   flex-direction: column;
-  .tabClose{
+  .close{
     display: flex;
-    width: 100%;
+    flex-direction: row;
     justify-content: flex-end;
-    padding: 20px 5%;
-    margin: 10px;
-    box-sizing: border-box;
+    
   }
-  .contentMenu{
+
+  .sideContent{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    color: #000000;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 34px;
-    padding-right: 5%;
-    cursor: pointer;
-    background-color: #1e2128;
-    height: 100%;
-    color: #10E956;
-
-    p:hover{
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    a{
+      font-family: "M PLUS Rounded 1c", sans-serif;
       color: white;
+      text-decoration: none;
+      font-size: 2em;
     }
   }
+}
+
+@media screen and (max-width: 767px){
+  .isDesktop{
+    display: none;
+  }
+
+  .isMobil{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
+  
 }

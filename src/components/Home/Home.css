@@ -1,15 +1,70 @@
-.contentPage{
-    h1{
-        font-size: 96px;
-        color: #10E956;
-    }
-    span{
-        font-size: 24px;
-    }
+.flexContent{
+    min-height: calc(100vh - 4em);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-.aligItems{
-    justify-content: center;
-    align-items: center;
-    background-color: #050810;
+.infoHome{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2%;
+    .btnCV{
+        width:fit-content;
+        cursor: pointer;
+        padding: 3%;
+        margin-top: 2%;
+        border: 3px solid #075FE4;
+        border-radius: 30px;
+        background-color: #1b1f24;
+        font-family: "Ropa Sans", sans-serif;
+        font-size: 1.2em;
+    }
+
+    .btnCV:hover{
+        background-color: #2a3440;
+        border-color: #2a3440;
+    }
+
+    .line{
+        border: 4px solid white;
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    span{
+        font-family: "Ropa Sans", sans-serif;
+        font-size: 2em;
+    }
+
+    
+}
+
+.signature{
+    font-family: 'Bestermind', sans-serif;
+    font-size: 7vw;
+    background-color: #2a3440;
+    border-radius: 50%;
+    
+}
+
+@media screen and (max-width: 767px){
+    .flexContent{
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .signature{
+        font-family: 'Bestermind', sans-serif;
+        font-size: 15vw;
+    }
+
 }
