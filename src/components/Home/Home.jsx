@@ -31,7 +31,7 @@ const Home = forwardRef( function Home(props, ref) {
             <div className='flexContent' ref={HomeRef}>
                 <div className='infoHome'>
                     <div className='line'></div>
-                    <h1>HOLA, SOY JONATHAN</h1>
+                    <h1>JONATHAN DIAZ</h1>
                     <span> Desarrollador frontend especializado en crear experiencias web dinámicas y responsivas </span>
                     <button className='btnCV' onClick={downloadCV} >Descargar CV</button>
                 </div>
