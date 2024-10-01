@@ -18,16 +18,16 @@ const Contact = forwardRef(function Contact(props, ref) {
             </div>
             <div className='contactDiv'>
                 <div className='lineContat'> 
-                    <FontAwesomeIcon icon={faAt} size='2x'/>  
+                    <FontAwesomeIcon icon={faAt} />  
                     <p>jsdiaz19.jd@gmail.com </p>
                 </div>
 
                 <div className='lineContat'> 
-                    <FontAwesomeIcon icon={faPhone} size='2x'/> 
+                    <FontAwesomeIcon icon={faPhone} /> 
                     <p> +57 316-868-1208</p> 
                 </div>
                 <div className='lineContat'> 
-                    <FontAwesomeIcon icon={faLocationPin} size='2x'/>
+                    <FontAwesomeIcon icon={faLocationPin} />
                     <p> Cali, Colombia </p>  
                 </div>
             </div>

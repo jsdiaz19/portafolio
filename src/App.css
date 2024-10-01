@@ -39,9 +39,7 @@
   justify-content: flex-end;
   gap: 15%;
   align-items: center;
-  .link:hover{
-    color: gray;
-  }
+  
 }
 
 .isMobil{
@@ -83,6 +81,14 @@
       font-size: 2em;
     }
   }
+}
+
+.link{
+  cursor: pointer;
+}
+
+.link:hover{
+  color: gray;
 }
 
 @media screen and (max-width: 767px){
