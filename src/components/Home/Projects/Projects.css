@@ -113,6 +113,14 @@
         border-bottom-left-radius: 10px;
         margin-left: auto;
     }
+
+    .contLink{
+        text-align: center;
+    }
+
+    .contLink:hover{
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 767px){
