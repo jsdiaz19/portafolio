@@ -1,6 +1,6 @@
 import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft, faPlay, faLink } from '@fortawesome/free-solid-svg-icons'; 
+import { faAngleRight, faAngleLeft, faLink } from '@fortawesome/free-solid-svg-icons'; 
 import { dataContext } from '../../../context/dataContext';
 import { useContext, useRef, forwardRef } from 'react';
 
@@ -38,9 +38,7 @@ const Projects = forwardRef(function Projects(props, ref) {
                             <div id='cardContent'>
                                 <h1>{item.title}</h1>
                                 <img src={`/assets/${item.img}`}/>
-                                <div className='barAction'>
-                                    { item.isPublic && <FontAwesomeIcon icon={faPlay} className='btnAct'/>}
-                                </div>
+
                             </div>
 
                             <div className='infoHover'>

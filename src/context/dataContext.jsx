@@ -10,6 +10,15 @@ export const DataProvider= ({ children }) => {
         </svg>
     );
 
+    const SvgIonic = ({ size }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={size} height={size}>
+            <circle cx="392" cy="120" r="40" fill="#3880ff"/>
+            <circle cx="256" cy="256" r="64" fill="#3880ff"/>
+            <path d="M256 32c-123.7 0-224 100.3-224 224s100.3 224 224 224 224-100.3 224-224-100.3-224-224-224zm0 384c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160-71.8 160-160 160z" fill="#3880ff"/>
+        </svg>
+
+    );
+
     const projects =  [
         { 
             title: 'Optimax', 
@@ -42,7 +51,31 @@ export const DataProvider= ({ children }) => {
             url: '',
             isPublic: true,
             tools: [ [faAndroid,'#38df88', true], [faSwift,'#f1563e', true] ]
-        }
+        },
+        { 
+            title: 'SmartCity', 
+            descript: 'Aplicativo web para vigilancia de fotomultas y medicciones ambientales', 
+            img: 'solfix.png', 
+            url: 'https://smartcity-preview.sol-fix.es/',
+            isPublic: true,
+            tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true] ]
+        },
+        { 
+            title: 'Alumbrado', 
+            descript: 'Aplicativo web para vigilancia de alumbrado publico', 
+            img: 'orion.png', 
+            url: 'https://alumbrado.azurewebsites.net/',
+            isPublic: true,
+            tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true] ]
+        },
+        { 
+            title: 'Cargadores', 
+            descript: 'Aplicativo web y movil para el cargue de vehiculos electricos', 
+            img: 'cargadores.png', 
+            url: 'https://usrcargadores.azurewebsites.net/',
+            isPublic: true,
+            tools: [ [faAngular,'#c4002b', true], [<SvgIonic size={28} key={2}/>],[faNodeJs,'green', true] ]
+        },
     ];
 
     return ( 
