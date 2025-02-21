@@ -8,7 +8,9 @@
 }
 
 .infoHome{
-    max-width: 50%;
+    max-width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
