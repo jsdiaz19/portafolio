@@ -28,16 +28,21 @@
     #cardContent{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         gap: 1em;
         word-break: break-all;
+        height: 100%;
+        justify-content: flex-start;
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            object-fit: contain;
+        }
     }
     
-    img{
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
+    
 }
 
 .header{ text-align: center;}
@@ -137,6 +142,7 @@
 
     #cardContent{
         font-size:smaller;
+        align-items: center;
     }
 
 }

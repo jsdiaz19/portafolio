@@ -29,7 +29,7 @@ export const DataProvider= ({ children }) => {
             tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true]]
         },
         { 
-            title: 'Manufacturas Vanessa', 
+            title: 'MV', 
             descript: 'Página web de calzado donde los usuarios pueden registrarse, realizar pedidos de productos y acceder a ofertas y promociones exclusivas', 
             img: 'manufacturas.png', 
             url: 'https://funny-panda-f579cf.netlify.app/',
@@ -53,7 +53,7 @@ export const DataProvider= ({ children }) => {
             tools: [ [faAndroid,'#38df88', true], [faSwift,'#f1563e', true] ]
         },
         { 
-            title: 'SmartCity', 
+            title: 'SmCity', 
             descript: 'Aplicativo web para vigilancia de fotomultas y medicciones ambientales', 
             img: 'solfix.png', 
             url: 'https://smartcity-preview.sol-fix.es/',
@@ -61,7 +61,7 @@ export const DataProvider= ({ children }) => {
             tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true] ]
         },
         { 
-            title: 'Alumbrado', 
+            title: 'AIoT', 
             descript: 'Aplicativo web para vigilancia de alumbrado publico', 
             img: 'orion.png', 
             url: 'https://alumbrado.azurewebsites.net/',
