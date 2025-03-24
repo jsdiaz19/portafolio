@@ -1,0 +1,20 @@
+ul{
+    list-style: none;
+}
+
+.cardStudy{
+    color: white;
+    border-left: 6px #075FE4 solid;
+    padding-left: 3%;
+    a{
+        color: white;
+    }
+}
+
+.cardStudy + .cardStudy{
+    margin-top: 2%;
+}
+
+.certf{
+    margin-top: 2%;
+}

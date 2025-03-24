@@ -30,7 +30,7 @@ function App() {
           homeRef.current.goToProject();
           break;
         case 4:
-          homeRef.current.gotToContact();
+          homeRef.current.gotToCertif();
           break;
         case 5:
           homeRef.current.gotToCompanies();
@@ -58,8 +58,8 @@ function App() {
               <a className='link' onClick={()=> goToSection(1)}> Home </a>
               <a className='link' onClick={()=> goToSection(2)}> Habilidades</a>
               <a className='link' onClick={()=> goToSection(3)}> Portafolio</a>
+              <a className='link' onClick={()=> goToSection(4)}>  Certificaciones</a>
               <a className='link' onClick={()=> goToSection(5)}> Empresas</a>
-              <a className='link' onClick={()=> goToSection(4)}>Contacto</a>
 
             </div>
 
@@ -75,10 +75,11 @@ function App() {
             </div>
               
             <div className='sideContent'>
-              <a className='link' onClick={()=> goMenuSection(1)}>Habilidades</a>
-              <a className='link' onClick={()=> goMenuSection(2)}>Experiencia</a>
-              <a className='link' onClick={()=> goMenuSection(3)}>Portafolio</a>
-              <a className='link' onClick={()=> goMenuSection(4)}>Contacto</a>
+            <a className='link' onClick={()=> goToSection(1)}> Home </a>
+              <a className='link' onClick={()=> goToSection(2)}> Habilidades</a>
+              <a className='link' onClick={()=> goToSection(3)}> Portafolio</a>
+              <a className='link' onClick={()=> goToSection(4)}>  Certificaciones</a>
+              <a className='link' onClick={()=> goToSection(5)}> Empresas</a>
             </div>
               
           </div>

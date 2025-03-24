@@ -3,9 +3,10 @@
 import './Home.scss';
 import Tool from './Tools/Tools';
 import Projects from './Projects/Projects';
+import Companies from './Companies/Companies';
+import Certifications from './Certifications/Certification';
 import { getDownloadFile } from '../../FirebaseConfig';
 import { forwardRef, useImperativeHandle, useRef, useState} from 'react';
-import Companies from './Companies/Companies';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,6 +16,7 @@ const Home = forwardRef( function Home(props, ref) {
     const toolRef= useRef(null);
     const projectRef= useRef(null);
     const companiesRef= useRef(null);
+    const certifRef = useRef(null);
     const menuRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const downloadCV= async()=> {
@@ -27,7 +29,8 @@ const Home = forwardRef( function Home(props, ref) {
             gotToHome: ()=> HomeRef.current.scrollIntoView({ behavior: 'smooth' }),
             gotToTools: ()=> toolRef.current.scrollIntoView({ behavior: 'smooth' }),
             goToProject: ()=> projectRef.current.scrollIntoView({ behavior: 'smooth' }),
-            gotToCompanies: ()=> companiesRef.current.scrollIntoView({ behavior: 'smooth' })
+            gotToCompanies: ()=> companiesRef.current.scrollIntoView({ behavior: 'smooth' }),
+            gotToCertif: ()=> certifRef.current.scrollIntoView({ behavior: 'smooth' })
         }
     })
 
@@ -77,6 +80,7 @@ const Home = forwardRef( function Home(props, ref) {
             </div>
             <Tool  ref={toolRef}/>
             <Projects ref={projectRef}/>
+            <Certifications ref={certifRef}/>
             <Companies ref={companiesRef}/>
                     
         </>

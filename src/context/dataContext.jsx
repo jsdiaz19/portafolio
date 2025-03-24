@@ -1,6 +1,6 @@
 import { createContext } from "react";
 export const dataContext = createContext();
-import { faAngular, faNodeJs, faReact, faAndroid, faSwift } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faNodeJs, faReact, faAndroid, faSwift, faPhp } from '@fortawesome/free-brands-svg-icons';
 
 export const DataProvider= ({ children }) => {
     
@@ -25,8 +25,8 @@ export const DataProvider= ({ children }) => {
             title: 'Optimax', 
             descript: 'Este proyecto está diseñado para la realización de pruebas visuales, proporcionando un diagnóstico preciso basado en los resultados obtenidos. Además, permite la integración con bases de datos de empresas, facilitando el almacenamiento y gestión de la información de los usuarios evaluados', 
             img: 'optimax.png', 
-            url: '',
-            isPublic: false,
+            url: 'https://appoptimax.optimaxpty.com',
+            isPublic: true,
             tools: [ [faAngular,'#c4002b', true, 'Angular'], [faNodeJs,'green', true,'Nodejs']]
         },
         {
@@ -52,7 +52,7 @@ export const DataProvider= ({ children }) => {
             title: 'Custos', 
             descript: 'Aplicativo movil para solicitar servicio de escoltas', 
             img: 'custos.png', 
-            url: '',
+            url: 'https://apps.apple.com/co/app/custos/id1235814824',
             isPublic: true,
             tools: [ [faAndroid,'#38df88', true,'Android'], [faSwift,'#f1563e', true,'Swift'] ]
         },
@@ -88,7 +88,7 @@ export const DataProvider= ({ children }) => {
             title: 'MyCom', 
             descript: "Esta aplicación está diseñada para mejorar la experiencia de los residentes en su comunidad, proporcionando una comunicación eficiente y directa con la portería y la administración. Facilita los procesos de autorizaciones administrativas, optimizando la gestión y reforzando la seguridad", 
             img: 'mycom.png', 
-            url: 'https://usrcargadores.azurewebsites.net/',
+            url: 'https://play.google.com/store/apps/details?id=io.ionic.mycom&pcampaignid=web_share',
             isPublic: true,
             tools: [ [<SvgIonic size={28} key={2}/>,'',false,'Ionic'],[faNodeJs,'green', true,'Nodejs'] ]
         },
@@ -99,12 +99,43 @@ export const DataProvider= ({ children }) => {
             img: 'bpm.png', 
             url: 'https://bpm.automarcali.com/',
             isPublic: true,
-            tools: [ [<SvgIonic size={28} key={2}/>,'',false,'Ionic'],[faNodeJs,'green', true,'Nodejs'] ]
+            tools: [ [faPhp,'#7b7fb5',true,'Php'],[faNodeJs,'green', true,'Nodejs'] ]
         },
     ];
 
+    const certifications = [
+        {
+          title: "React: De cero a experto( Hooks y MERN)",
+          provider: "Udemy",
+          status: 1,
+          year: 2025,
+          link: "https://www.udemy.com/course/react-cero-experto/",
+        },
+        {
+          title: "CURSO DE GIT + GITHUB",
+          provider: "Platzi",
+          year: 2019,
+          status:1,
+          link: "",
+        },
+        {
+          title: "CERTIFICADO RETO API HALLTEC S.A.S",
+          provider: "HALLTEC S.A.S",
+          year:2025,
+          status:1,
+          link: "https://firebasestorage.googleapis.com/v0/b/portafolio-ce100.appspot.com/o/certificados%2FCERTIFICADOS%20HALLTEC%20Y%20FACTUS%20JHONATAN%20DIAZ.pdf?alt=media&token=2559a42d-1bc2-4e2e-b779-dce127fec17c",
+        },
+        {
+            title: "Arquitectura de Software y Cloud Computing",
+            provider: "Universidad Javerian Cali",
+            year:2025,
+            status:0,
+            link: "",
+          },
+      ];
+
     return ( 
-        <dataContext.Provider value={ { projects }}>
+        <dataContext.Provider value={ { projects, certifications }}>
             { children }
         </dataContext.Provider>
      );
