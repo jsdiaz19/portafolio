@@ -4,7 +4,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 .infoHome{
@@ -15,9 +14,11 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 2%;
-    .btnCV{
+    
+    .btnCV {
         width:fit-content;
         cursor: pointer;
+        color: inherit;
         padding: 3%;
         margin-top: 2%;
         border: 3px solid #075FE4;
@@ -45,9 +46,7 @@
     span{
         font-family: "Ropa Sans", sans-serif;
         font-size: 2em;
-    }
-
-    
+    }  
 }
 
 .signature{
@@ -56,6 +55,15 @@
     background-color: #2a3440;
     border-radius: 50%;
     
+}
+
+.sectionBtn{
+    margin-top: 3%;
+    display: inline-flex;
+    gap: 3%;
+    div{
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 767px){

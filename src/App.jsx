@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.scss'
 import {faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Home from './components/Home/Home';
@@ -32,6 +32,9 @@ function App() {
         case 4:
           homeRef.current.gotToContact();
           break;
+        case 5:
+          homeRef.current.gotToCompanies();
+          break;
         default:
           break;
       }
@@ -55,6 +58,7 @@ function App() {
               <a className='link' onClick={()=> goToSection(1)}> Home </a>
               <a className='link' onClick={()=> goToSection(2)}> Habilidades</a>
               <a className='link' onClick={()=> goToSection(3)}> Portafolio</a>
+              <a className='link' onClick={()=> goToSection(5)}> Empresas</a>
               <a className='link' onClick={()=> goToSection(4)}>Contacto</a>
 
             </div>

@@ -1,6 +1,5 @@
-import './Projects.css';
+import './Projects.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft, faLink } from '@fortawesome/free-solid-svg-icons'; 
 import { dataContext } from '../../../context/dataContext';
 import { useContext, useRef, forwardRef } from 'react';
 
@@ -26,41 +25,80 @@ const Projects = forwardRef(function Projects(props, ref) {
     }
     return ( 
         <div className='projectContainer' ref={ref}>
-            <h1 className='header'>PROYECTOS</h1>
-            <div className='navigation'>
-                <FontAwesomeIcon icon={faAngleLeft} size='2x' className='btnVNav' onClick={scrollLeft}/>
-                <FontAwesomeIcon icon={faAngleRight} size='2x' className='btnVNav active' onClick={scrollRight}/>
-            </div>
-            <div className='contentProject' ref={carouselRef}>
+            <h1 className='header'>PROYECTOS</h1>   
+
+            <div className="projects">
                 {
-                    projects.map((item, index)=> (
-                        <div className='cardProject' key={index} >
-                            <div id='cardContent'>
-                                <h1>{item.title}</h1>
+                    projects.map((item)=> (
+                        <div className='cardProject'>
+
+                            <div className='legend'>
                                 <img src={`/assets/${item.img}`}/>
-
+                            </div>
+                            
+                            <div className='content'>
+                                <h1>{item.title}</h1>
+                                <p>{item.descript }</p>
+                            </div>
+                            
+                            <div className='footerCard'>
+                                {
+                                    item.tools.map((tool, index) => (
+                                        <div className='lng'>
+                                            { tool[2] ? <FontAwesomeIcon key={`${item.id}-tool${index}`} icon={tool[0]} color={tool[1]} size='2x'/> : tool[0]}
+                                            <p>{tool[3]} </p>
+                                        </div>
+                                        
+                                       
+                                    ))
+                                }
                             </div>
 
-                            <div className='infoHover'>
-                                <div className='sectionHover izq'>{item.descript } </div>
-                                { item.url!='' &&  <div className='contLink' onClick={()=> goLink(item.url)} > <FontAwesomeIcon icon={faLink}  size='4x'/>  </div> }
-                                <div className='sectionHover der'>
-                                    {
-                                        item.tools.map((tool, index) => (
-                                            tool[2] ? <FontAwesomeIcon key={index} icon={tool[0]} color={tool[1]} size='2x'/> : tool[0]
-                                        ))
-                                    }
+                            {
+                                <div className='contButton'>
+                                    { item.isPublic &&  <a href={item.url}>Visitar</a> }
                                 </div>
-                            </div>
+                            }
                         </div>
-                    
                     ))
                 }
+                
             </div>
-
         </div>
      );
 });
 
 
 export default Projects;
+
+
+{/* <div className='navigation'>
+<FontAwesomeIcon icon={faAngleLeft} size='2x' className='btnVNav' onClick={scrollLeft}/>
+<FontAwesomeIcon icon={faAngleRight} size='2x' className='btnVNav active' onClick={scrollRight}/>
+</div>
+<div className='contentProject' ref={carouselRef}>
+{
+    projects.map((item)=> (
+        <div className='cardProject' key={item.id} >
+            <div id='cardContent'>
+                <h1>{item.title}</h1>
+                <img src={`/assets/${item.img}`}/>
+
+            </div>
+
+            <div className='infoHover'>
+                <div className='sectionHover izq'>{item.descript } </div>
+                { item.url!='' &&  <div className='contLink' onClick={()=> goLink(item.url)} > <FontAwesomeIcon icon={faLink}  size='4x'/>  </div> }
+                <div className='sectionHover der'>
+                    {
+                        item.tools.map((tool, index) => (
+                            tool[2] ? <FontAwesomeIcon key={`${item.id}-tool${index}`} icon={tool[0]} color={tool[1]} size='2x'/> : tool[0]
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    
+    ))
+}
+</div> */}

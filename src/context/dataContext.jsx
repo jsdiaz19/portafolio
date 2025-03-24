@@ -21,60 +21,85 @@ export const DataProvider= ({ children }) => {
 
     const projects =  [
         { 
+            id:1,
             title: 'Optimax', 
-            descript: 'Este proyecto realiza pruebas visuales y su respectivo diagnostico', 
+            descript: 'Este proyecto está diseñado para la realización de pruebas visuales, proporcionando un diagnóstico preciso basado en los resultados obtenidos. Además, permite la integración con bases de datos de empresas, facilitando el almacenamiento y gestión de la información de los usuarios evaluados', 
             img: 'optimax.png', 
             url: '',
             isPublic: false,
-            tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true]]
+            tools: [ [faAngular,'#c4002b', true, 'Angular'], [faNodeJs,'green', true,'Nodejs']]
         },
-        { 
-            title: 'MV', 
-            descript: 'Página web de calzado donde los usuarios pueden registrarse, realizar pedidos de productos y acceder a ofertas y promociones exclusivas', 
+        {
+            id:2, 
+            title: 'Manufacturas Vanessa', 
+            descript: 'Esta página web de calzado permite a los usuarios registrarse para acceder a una experiencia de compra personalizada. Los clientes pueden explorar un catálogo de productos, realizar pedidos de manera sencilla y segura, y disfrutar de ofertas y promociones exclusivas.', 
             img: 'manufacturas.png', 
             url: 'https://funny-panda-f579cf.netlify.app/',
             isPublic: true,
-            tools: [ [faAngular,'#c4002b', true], [ <SvgFastApi size={28} key={2}/>,'green', false]]
+            tools: [ [faAngular,'#c4002b', true,'Angular'], [ <SvgFastApi size={28} key={2}/>,'green', false, 'FastApi']]
         },
-        { 
+        {
+            id: 3, 
             title: 'CMS', 
-            descript: 'Sistema de administracion para procesos internos(gestion de usuarios, guardaspaldas y servicios)', 
+            descript: 'Este sistema de administración está diseñado para optimizar los procesos internos de gestión, permitiendo la creación y administración de usuarios, guardaespaldas, servicios y empresas. La plataforma facilita la asignación eficiente de recursos, el seguimiento de servicios prestados y la organización estructurada de la información, garantizando un control preciso y seguro de cada operación.', 
             img: 'cms.png', 
             url: '',
             isPublic: false,
-            tools: [ [faReact,'#08d8fe', true], [faNodeJs,'green', true] ]
+            tools: [ [faReact,'#08d8fe', true,'React'], [faNodeJs,'green', true,'Nodejs'] ]
         },
         { 
+            id:4,
             title: 'Custos', 
             descript: 'Aplicativo movil para solicitar servicio de escoltas', 
             img: 'custos.png', 
             url: '',
             isPublic: true,
-            tools: [ [faAndroid,'#38df88', true], [faSwift,'#f1563e', true] ]
+            tools: [ [faAndroid,'#38df88', true,'Android'], [faSwift,'#f1563e', true,'Swift'] ]
         },
-        { 
-            title: 'SmCity', 
+        {
+            id:5, 
+            title: 'Smart city', 
             descript: 'Aplicativo web para vigilancia de fotomultas y medicciones ambientales', 
             img: 'solfix.png', 
             url: 'https://smartcity-preview.sol-fix.es/',
             isPublic: true,
-            tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true] ]
+            tools: [ [faAngular,'#c4002b', true,'Angular'], [faNodeJs,'green', true,'Nodejs'] ]
         },
         { 
+            id:6,
             title: 'AIoT', 
             descript: 'Aplicativo web para vigilancia de alumbrado publico', 
             img: 'orion.png', 
             url: 'https://alumbrado.azurewebsites.net/',
             isPublic: true,
-            tools: [ [faAngular,'#c4002b', true], [faNodeJs,'green', true] ]
+            tools: [ [faAngular,'#c4002b', true,'Angular'], [faNodeJs,'green', true,'Nodejs'] ]
         },
-        { 
+        {
+            id:7, 
             title: 'Cargadores', 
             descript: 'Aplicativo web y movil para el cargue de vehiculos electricos', 
             img: 'cargadores.png', 
             url: 'https://usrcargadores.azurewebsites.net/',
             isPublic: true,
-            tools: [ [faAngular,'#c4002b', true], [<SvgIonic size={28} key={2}/>],[faNodeJs,'green', true] ]
+            tools: [ [faAngular,'#c4002b', true,'Angular'], [<SvgIonic size={28} key={2}/>,'',false,'Ionic'],[faNodeJs,'green', true,'Nodejs'] ]
+        },
+        {
+            id:8, 
+            title: 'MyCom', 
+            descript: "Esta aplicación está diseñada para mejorar la experiencia de los residentes en su comunidad, proporcionando una comunicación eficiente y directa con la portería y la administración. Facilita los procesos de autorizaciones administrativas, optimizando la gestión y reforzando la seguridad", 
+            img: 'mycom.png', 
+            url: 'https://usrcargadores.azurewebsites.net/',
+            isPublic: true,
+            tools: [ [<SvgIonic size={28} key={2}/>,'',false,'Ionic'],[faNodeJs,'green', true,'Nodejs'] ]
+        },
+        {
+            id:9, 
+            title: 'Bussiness Management Process', 
+            descript: 'Esta plataforma administrativa permite la gestión integral de pedidos, cotizaciones y simulaciones de crédito, optimizando el flujo de trabajo y la toma de decisiones. Ofrece herramientas para la creación y administración de vehículos, clientes y vendedores, facilitando el seguimiento de cada proceso. Además, genera reportes detallados de ventas mensuales, anuales y semestrales, brindando una visión clara del desempeño comercial y la productividad de los vendedores para una gestión eficiente y estratégica', 
+            img: 'bpm.png', 
+            url: 'https://bpm.automarcali.com/',
+            isPublic: true,
+            tools: [ [<SvgIonic size={28} key={2}/>,'',false,'Ionic'],[faNodeJs,'green', true,'Nodejs'] ]
         },
     ];
 
