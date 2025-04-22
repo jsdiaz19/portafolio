@@ -93,6 +93,10 @@
   color: gray;
 }
 
+p, span{
+  font-size: clamp(1.5rem, 2vw + 0.2rem, 1.4rem); 
+}
+
 @media screen and (max-width: 767px){
   .isDesktop{
     display: none;

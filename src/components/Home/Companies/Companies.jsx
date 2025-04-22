@@ -14,7 +14,7 @@ const Companies= forwardRef(function Companies(props, ref) {
             <div className='companies'>
                 {
                     companiesLogo.map((logo, index) => (
-                        <div className='compContainer'>
+                        <div className='compContainer' key={index}>
                             <img src={`/assets/${logo}`}/>
                         </div>
                     ))

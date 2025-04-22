@@ -101,6 +101,15 @@ export const DataProvider= ({ children }) => {
             isPublic: true,
             tools: [ [faPhp,'#7b7fb5',true,'Php'],[faNodeJs,'green', true,'Nodejs'] ]
         },
+        {
+            id:10, 
+            title: 'Rialssa', 
+            descript: 'Página web informativa para una empresa constructora, donde se presenta su historia, servicios, proyectos destacados, clientes y valores corporativos. El sitio ofrece una navegación clara y moderna, enfocada en resaltar la trayectoria de la empresa y generar confianza en potenciales clientes.', 
+            img: 'Rialssa.webp', 
+            url: '',
+            isPublic: false,
+            tools: [ [faAngular,'#c4002b', true,'Angular'] ]
+        },
     ];
 
     const certifications = [
